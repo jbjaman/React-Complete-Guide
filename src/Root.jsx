@@ -6,7 +6,7 @@ import NavBar from "./NavBar/NavBar";
 const Root = () => {
     return (
         <div>
-            <h1>WELCOME TO REACT</h1>
+            <h1 className="flex items-center gap-2 m-3 text-2xl font-bold"><span className=""><img className="w-6 h-6" src="/React-Dark.svg" alt="" /></span>REACT</h1>
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>

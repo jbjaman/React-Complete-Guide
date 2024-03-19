@@ -10,7 +10,7 @@ const ArticleElements = ({ heading, content, example }) => {
                 </article>
                 <div className="border m-3 p-3 rounded-lg text-center border-emerald-400 shadow-lg md:col-span-3">
                     <p>Example</p>
-                    <p>{example}</p>
+                    {example}
                 </div>
             </section>
         </>
