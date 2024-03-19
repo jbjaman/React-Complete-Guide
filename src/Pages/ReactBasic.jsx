@@ -1,4 +1,5 @@
 import ArticleElements from "../Components/ArticleElements";
+import ReactState from "../Components/ReactState";
 import ReactUser from "../Components/ReactUser";
 
 
@@ -20,6 +21,7 @@ const ReactBasic = () => {
             <ArticleElements heading={"What is JSX in React ?"} content={"JSX is a syntax extension for Javascript. It allows you to write HTML elements and components in a JavaScript file. JSX is a syntax sugar that gets compiled into JavaScript"} example={jsxText}
             ></ArticleElements>
             <ArticleElements heading={"What are the components in React ?"} content={"Components are the building block of a react application. They are reusable, self contained pieces of code that manage their state and UI. Components can be either functional or class-based."} example={compoText}></ArticleElements>
+            <ArticleElements heading={"What is state in React ?"} content={"State is a built in object in React used for holding information that influences a component's behavior. It represents the current condition of a component. State can be changed over time in response to user actions or other events."} example={<ReactState></ReactState>}></ArticleElements>
         </>
     );
 };
