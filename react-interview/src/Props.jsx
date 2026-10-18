@@ -1,7 +1,10 @@
+import { useState } from "react";
+import ChildProp from "./ChildProp";
 import ClassMate from "./ClassMate";
 import Student2 from "./Student2";
 
 const Props = () => {
+  const [count, setCount] = useState(0);
   return (
     <div className="p-5 bg-black text-slate-100 text-xl border border-slate-500 m-2 rounded-md">
       <p>
@@ -32,6 +35,9 @@ const Props = () => {
         Interview-এ মনে রাখবে: Props সাধারণত parent থেকে child-এ data পাঠায়;
         child props-কে সরাসরি mutate করে না।
       </p>
+
+      <h2>Count : {count}</h2>
+      <ChildProp onIncrease={() => setCount((prevCount) => prevCount + 1)} />
     </div>
   );
 };

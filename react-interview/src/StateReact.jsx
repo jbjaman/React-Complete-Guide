@@ -1,7 +1,20 @@
 import { useState } from "react";
+import CounterDisplay from "./CounterDisplay";
 
 const StateReact = () => {
   const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
+  const [countDis, setCountDis] = useState(0);
+
+  function increase() {
+    setCounter((previousCount) => previousCount + 1);
+  }
+  function decrease() {
+    setCounter((previousCount) => previousCount - 1);
+  }
+  function reset() {
+    setCounter(0);
+  }
 
   function handleClick() {
     alert("Button Clicked");
@@ -93,8 +106,50 @@ function App() {
         className="border-amber-300 border p-2 ml-4 rounded-md"
       >
         {/* এখানে arrow function click হওয়ার সময় greet("Rahim") চালায়। */}
-        Greet
+        Greet Alert
       </button>
+
+      {/* 
+      
+      5. State update-এর আরেকটি পদ্ধতি: Functional Update
+- কিন্তু নতুন state যদি আগের state-এর ওপর নির্ভর করে, তাহলে functional update খুব উপকারী:
+setCount(previousCount => previousCount + 1);
+      */}
+
+      <p>Counter : {counter}</p>
+
+      <button
+        onClick={increase}
+        className="border-green-300 border p-2 ml-4 rounded-md"
+      >
+        Increase
+      </button>
+      <button
+        onClick={decrease}
+        className="border-red-300 border p-2 ml-4 rounded-md"
+      >
+        Decrease
+      </button>
+      <button
+        onClick={reset}
+        className="border-amber-300 border p-2 ml-4 rounded-md"
+      >
+        Reset
+      </button>
+
+      {/* Senior-level mental model: যখন নতুন state আগের state-এর ওপর নির্ভর করে, তখন setCounter(previousCount => ...) ব্যবহার করা একটি ভালো অভ্যাস। React একাধিক state update batch করতে পারে, তাই এই পদ্ধতি state-এর আগের মানের ওপর নির্ভরশীল update-গুলোকে নির্ভরযোগ্যভাবে প্রকাশ করে। */}
+      <CounterDisplay countDisplay={countDis} />
+      {/* CounterDisplay-এ count prop হিসেবে যাচ্ছে। */}
+      {/* CounterDisplay নতুন countDis prop পাচ্ছে এবং আপডেট হওয়া সংখ্যা দেখাচ্ছে। */}
+      <button
+        onClick={() => setCountDis((pre) => pre + 1)}
+        className="border-purple-700 border p-2 ml-4 rounded-md"
+      >
+        INCREASE
+        {/* Button click করলে state update হচ্ছে। */}
+      </button>
+
+      {/* এটি React-এর one-way data flow: parent থেকে child-এ data যায়। */}
     </div>
   );
 };
