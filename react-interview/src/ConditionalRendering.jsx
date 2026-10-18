@@ -2,9 +2,11 @@
 // JavaScript-এর if, ternary operator ? :, এবং && operator ব্যবহার করে React-এ conditional rendering করা যায়।
 
 import App from "./App";
+import { CallBackProps } from "./CallBackProps";
 import CheckBoxSelect from "./CheckBoxSelect";
 import ControlledInput from "./ControlledInput";
 import FormSubmit from "./FormSubmit";
+import { LiftingStateUp, LiftingStateUp2 } from "./LiftingStateUp";
 import ListArray from "./ListArray";
 import ObjectList from "./ObjectList";
 import OnChange from "./OnChange";
@@ -119,6 +121,15 @@ function ConditionalRendering() {
         </div>
         <div className="border border-amber-200 p-4">
           <CheckBoxSelect />
+        </div>
+        <div className="border border-amber-200 p-4">
+          <LiftingStateUp />
+        </div>
+        <div className="border border-amber-200 p-4">
+          <LiftingStateUp2 />
+        </div>
+        <div className="border border-amber-200 p-4">
+          <CallBackProps />
         </div>
       </div>
     </>
