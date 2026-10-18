@@ -23,14 +23,13 @@ function ToDoList() {
                 {/* key={task.id} দিয়ে প্রতিটি task-কে stable identity দেওয়া হয়েছে। */}
 
                 <p className="text-green-50">{task.title}</p>
-                <p>
-                  {/* task.completed && " — Completed" দিয়ে completed task-এর জন্য অতিরিক্ত text দেখানো হয়েছে। */}
-                  {task.completed && (
-                    <p className="text-green-400 bg-slate-700 px-3 py-1 rounded-2xl">
-                      Completed
-                    </p>
-                  )}
-                </p>
+
+                {/* task.completed && " — Completed" দিয়ে completed task-এর জন্য অতিরিক্ত text দেখানো হয়েছে। */}
+                {task.completed && (
+                  <p className="text-green-400 bg-slate-700 px-3 py-1 rounded-2xl">
+                    Completed
+                  </p>
+                )}
               </div>
             ))}
           </div>
