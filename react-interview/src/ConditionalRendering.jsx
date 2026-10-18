@@ -4,6 +4,7 @@
 import App from "./App";
 import { CallBackProps } from "./CallBackProps";
 import CheckBoxSelect from "./CheckBoxSelect";
+import { ChildrenProp } from "./ChildrenProp";
 import ControlledInput from "./ControlledInput";
 import FormSubmit from "./FormSubmit";
 import { LiftingStateUp, LiftingStateUp2 } from "./LiftingStateUp";
@@ -130,6 +131,9 @@ function ConditionalRendering() {
         </div>
         <div className="border border-amber-200 p-4">
           <CallBackProps />
+        </div>
+        <div className="border border-amber-200 p-4">
+          <ChildrenProp />
         </div>
       </div>
     </>
