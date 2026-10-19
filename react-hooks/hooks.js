@@ -8,3 +8,15 @@
  * 2. Class Component: JavaScript class দিয়ে তৈরি পুরোনো ধাঁচের component।
  *
  */
+
+// Rules of Hooks — দ্রুত রিভিশন
+
+/**
+ *
+ * - Hook অবশ্যই Function Component বা Custom Hook-এর top level-এ call করবে।
+ * - if, loop বা nested function-এর ভেতরে Hook call করবে না।
+ * - Effect-এর dependency array-তে ব্যবহৃত reactive value-গুলো সঠিকভাবে উল্লেখ করবে।
+ * - Effect-এর setup-এর সঙ্গে সম্পর্কিত resource থাকলে cleanup করবে।
+ * - State update যদি আগের state-এর ওপর নির্ভর করে, functional update বিবেচনা করবে।
+ *
+ */
