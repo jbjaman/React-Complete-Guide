@@ -72,3 +72,39 @@ calculateTotal();
 // 200
 
 // async/await Promise-এর বিকল্প কোনো আলাদা asynchronous system নয়। এটি Promise নিয়ে কাজ করার একটি syntax।
+
+// interview-এর জন্য অত্যন্ত গুরুত্বপূর্ণ।
+
+// await করা Promise reject হলে কী হয়?
+
+Promise.reject(new Error("Request failed"));
+// এটি একটি rejected Promise তৈরি করে।
+// এবার await দিয়ে সেই Promise ব্যবহার করি:
+
+async function loadData() {
+  const result = await Promise.reject(new Error("Request failed"));
+
+  console.log(result);
+}
+
+loadData();
+// এখানে console.log(result) execute হবে না। await rejected Promise-এর সম্মুখীন হলে loadData()-এর execution সেই error নিয়ে rejected Promise return করার মাধ্যমে শেষ হয়।
+
+// যদি error handle করতে চাই:
+
+async function loadData() {
+  // loadData() call হয়েছে।
+  try {
+    const result = await Promise.reject(new Error("Request failed"));
+    // await rejected Promise-এর result নিতে গিয়ে error পেয়েছে। সেই error try block থেকে throw হওয়ার মতো আচরণ করেছে।
+    console.log(result);
+  } catch (error) {
+    // catch error-টি handle করেছে।
+    console.log("Error:", error.message);
+    // "Error: Request failed" print হয়েছে।
+  }
+}
+
+loadData();
+// Error: Request failed
+// await করা Promise reject হলে try/catch দিয়ে সেটি handle করা যায়।
