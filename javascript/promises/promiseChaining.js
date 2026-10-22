@@ -12,6 +12,27 @@ Promise.resolve(5)
   .then((value) => {
     console.log(value); // 13
   });
+// --------------------->
+
+Promise.resolve(5)
+  .then((value) => {
+    value * 2;
+  })
+  .then((value) => {
+    console.log(value);
+  });
+
+// undefined -> প্রথম .then()-এর callback কোনো value return করেনি। তাই তার return করা Promise fulfilled হয়েছে undefined দিয়ে।
+
+// সঠিক version:
+
+Promise.resolve(5)
+  .then((value) => {
+    return value * 2;
+  })
+  .then((value) => {
+    console.log(value); // 10
+  });
 
 //   এক লাইনের arrow function হলে implicit return-ও করা যায়:
 
@@ -53,3 +74,25 @@ Promise.resolve(10)
 
 // Step 1: 10
 // Caught: Something failed
+
+// Step 2 print হয়নি কেন?
+
+// প্রথম .then()-এর callback error throw করেছে। ফলে chain rejected হয়েছে। এরপরের success handler skip হয়েছে এবং control .catch()-এ পৌঁছেছে।
+
+// Promise chain-এ rejection handle না হওয়া পর্যন্ত পরবর্তী success handlers skip হতে থাকে। কোনো .catch() error handle করলে তার return value দিয়ে chain আবার fulfilled হতে পারে।
+
+// Error handle করার পর chain আবার চালানো:
+
+Promise.reject("Failed")
+  .catch((error) => {
+    console.log("Handled:", error);
+    return "Recovered";
+  })
+  .then((value) => {
+    console.log("Next:", value);
+  });
+
+// Handled: Failed
+// Next: Recovered
+
+// এখানে .catch() error handle করে "Recovered" return করেছে। ফলে পরবর্তী .then() success path-এ execute হয়েছে।

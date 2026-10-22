@@ -18,6 +18,9 @@ const promise = new Promise((resolve, reject) => {
   resolve("Task Completed");
 });
 
+// Promise হলো একটি Asynchronous (অ্যাসিঙ্ক্রোনাস) অবজেক্ট। যখন কোনো Promise-এর ভিতর resolve("Task Completed") কল করা হয়, তখন Promise-টি সফলভাবে সম্পন্ন (fulfilled) হয়।
+
+// কিন্তু ওই রেজাল্ট ("Task Completed") সরাসরি বাহিরে চলে আসে না। resolve() থেকে পাঠানো ডাটা বা মেসেজটিকে রিসিভ বা ক্যাচ করার জন্যই promise.then() ব্যবহার করা হয়।
 promise.then((result) => {
   console.log(result);
 });
@@ -28,7 +31,7 @@ promise.then((result) => {
  * - Promise তৈরি হয়েছে।
  * - Executor function সঙ্গে সঙ্গেই execute হয়েছে।
  * - resolve("Task completed!") Promise-কে fulfilled করেছে।
- * - .then() success handler register করেছে।
+ * - .then() success handler register করেছে। .then()-এর কাজ হলো: "যখন Promise-এর কাজ শেষ (resolve) হবে, তখন তুমি এই ফাংশনটি চালাও এবং রেজাল্টটি ব্যবহার করো।"
  * - Promise fulfilled হওয়ায় handler পরে execute হয়েছে এবং result print করেছে।
  *
  * Promise-এর executor function synchronousভাবে execute হয়। কিন্তু .then()-এর handler asynchronousভাবে, বর্তমান synchronous execution শেষ হওয়ার পরে execute হয়।
