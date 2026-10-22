@@ -1,7 +1,7 @@
 // Function বাইরে চলে গেলেও variable কীভাবে মনে থাকে?
 
 function outer() {
-  const name = "Karim"; // name = "Rahim" তৈরি হয়
+  const name = "Karim"; // name = "Karim" তৈরি হয়
 
   // এবং inner function define হয়।
 
@@ -16,4 +16,4 @@ const myFunction = outer(); // myFunction-এর মধ্যে returned inner 
 
 myFunction(); // inner এখনও তার outer lexical environment-এর name variable access করতে পারে।
 
-// Output: Rahim
+// Output: Karim
