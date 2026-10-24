@@ -9,7 +9,7 @@ getUser(function (name) {
 });
 
 // এখানে getUser() একটি callback গ্রহণ করছে। কাজটি ছোট হওয়ায় code সহজ।
-// কিন্তু যখন অনেকগুলো asynchronous operation একটির পর একটি করতে হয়, তখন nested callback জটিল হতে পারে। Promise এই ধরনের কাজ organize করতে সাহায্য করে।
+// কিন্তু যখন অনেকগুলো asynchronous opeয়, তখন nested callback জটিল হতে পারে। Promise এই ধরনের কাজ organize করতে ration একটির পর একটি করতে হসাহায্য করে।
 
 // একই কাজ Promise দিয়ে :
 
