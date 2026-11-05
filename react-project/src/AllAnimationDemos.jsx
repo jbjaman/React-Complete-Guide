@@ -52,10 +52,10 @@ export default function AllAnimationDemos() {
             onClick={() => setMoved(!moved)}
             className="w-32 h-40 bg-white rounded-xl shadow-lg cursor-pointer overflow-hidden border"
             animate={{
-              x: moved ? 180 : 0,
-              y: moved ? 60 : 0,
-              scale: moved ? 0.9 : 1,
-              rotate: moved ? -7 : 0,
+              x: moved ? 190 : 0,
+              y: moved ? 40 : 0,
+              scale: moved ? 1 : 1,
+              rotate: moved ? 0 : 0,
             }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
           >

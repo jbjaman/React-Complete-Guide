@@ -147,7 +147,37 @@
  *
  */
 
+/**
+ *
+ * Interview Signal: Cleanup Function কেন ব্যবহার করা হয়? উত্তর—Unnecessary background work বন্ধ করা এবং resource cleanup করার জন্য।
+ *
+ */
+
 // ৫. API Fetch করা — বাস্তব উদাহরণ ----> ApiFetchUsinghooks.jsx file
+/**
+ *
+ * React দিয়ে API থেকে data আনতে সাধারণত fetch() ব্যবহার করা হয়।
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 // ৬. Infinite Loop — Interview-এ খুব সাধারণ প্রশ্ন
 

@@ -71,3 +71,11 @@ function Users() {
 }
 
 export default Users;
+
+// এখানে গুরুত্বপূর্ণ বিষয়:
+// 1. useEffect দিয়ে initial API request করা হয়েছে।
+// 2. fetch() দিয়ে API call করা হয়েছে।
+// 3. response.ok দিয়ে HTTP response check করা হয়েছে।
+// 4. response.json() দিয়ে JSON data নেওয়া হয়েছে।
+// 5. useState দিয়ে data, loading এবং error manage করা হয়েছে।
+// 6. finally দিয়ে loading শেষ করা হয়েছে।

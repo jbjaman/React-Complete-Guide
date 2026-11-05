@@ -1,0 +1,3 @@
+Controlled Component
+Input-এর value React State দ্বারা control করা হয়।
+
