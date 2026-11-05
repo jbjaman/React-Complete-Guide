@@ -1,0 +1,31 @@
+State হলো Component-এর নিজস্ব data, যা পরিবর্তিত হলে React component আবার render করে।
+
+React-এ State manage করার জন্য useState Hook ব্যবহার করা হয়।
+
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+এখানে:
+- count = বর্তমান state value
+- setCount = State update function
+- useState(0) = Initial state value
+
+
+  return (
+    <div>
+      <h2>{count}</h2>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increase
+      </button>
+    </div>
+  );
+}
+
+যখন setCount() call করা হয়, React নতুন state অনুযায়ী component render করে।
+
+setCount(prevCount => prevCount + 1);
+
+যখন নতুন state আগের state-এর ওপর নির্ভর করে, তখন functional updater ব্যবহার করা ভালো।

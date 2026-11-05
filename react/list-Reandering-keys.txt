@@ -1,0 +1,35 @@
+React-এ Array থেকে একাধিক UI তৈরি করতে map() ব্যবহার করা 
+
+const users = ["Rahim", "Karim", "Hasan"];
+
+function App() {
+  return (
+    <ul>
+      {users.map((user, index) => (
+        <li key={index}>{user}</li>
+      ))}
+    </ul>
+  );
+}
+
+Key React-কে list-এর কোন item পরিবর্তিত হয়েছে, যোগ হয়েছে বা বাদ গেছে তা শনাক্ত করতে সাহায্য করে।
+
+সাধারণত unique ID ব্যবহার করা ভালো।
+
+const users = [
+  { id: 1, name: "Rahim" },
+  { id: 2, name: "Karim" },
+  { id: 3, name: "Hasan" }
+];
+
+function App() {
+  return (
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
+
+Keys help React identify which list items have changed, been added, or removed. They help React update lists correctly.

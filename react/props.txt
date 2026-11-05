@@ -1,0 +1,30 @@
+Props-এর পূর্ণরূপ Properties।
+
+Parent Component থেকে Child Component-এ data পাঠানোর জন্য Props ব্যবহার করা হয়।
+
+function User({ name, age }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>{age}</p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <User name="Rahim" age={25} />
+      <User name="Karim" age={22} />
+    </div>
+  );
+}
+
+Props-এর গুরুত্বপূর্ণ বৈশিষ্ট্য
+1. Props Parent থেকে Child-এ যায়।
+2. Props read-only।
+3. Child Component সরাসরি Props পরিবর্তন করতে পারে না।
+4. Props দিয়ে component reusable করা যায়।
+
+Props are used to pass data from a parent component to a child component. They are read-only and help make components reusable.
+

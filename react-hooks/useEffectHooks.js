@@ -2,7 +2,7 @@
 
 // useEffect আসলে কী?
 
-// সহজভাবে বললে, useEffect ব্যবহার করা হয় React component-কে বাইরের কোনো system-এর সঙ্গে synchronize করার জন্য।
+// সহজভাবে বললে, useEffect ব্যবহার করা হয় React component-কে বাইরের কোনো system-এর সঙ্গে synchronize করার জন্য। Component-এর বাইরে কোনো side effect পরিচালনার জন্য useEffect ব্যবহার হয়।
 
 /**
  * যেমন:

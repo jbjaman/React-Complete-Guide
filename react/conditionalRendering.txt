@@ -1,0 +1,23 @@
+Condition অনুযায়ী ভিন্ন UI দেখানোকে Conditional Rendering বলে।
+
+>> if-else
+
+function App() {
+  const isLoggedIn = true;
+
+  if (isLoggedIn) {
+    return <h1>Welcome Back!</h1>;
+  }
+
+  return <h1>Please Login</h1>;
+}
+
+>> Ternary Operator
+
+{isLoggedIn ? <h1>Welcome</h1> : <h1>Login</h1>}
+
+>> Logical AND (&&)
+
+{isLoggedIn && <h1>Welcome Back!</h1>}
+
+Condition true হলে UI দেখাবে।

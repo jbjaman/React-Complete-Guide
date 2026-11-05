@@ -1,0 +1,25 @@
+React-এ user interaction handle করার জন্য Event Handling ব্যবহার 
+
+যেমন:
+- Button click
+- Input change
+- Form submit
+- Mouse events
+
+function App() {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
+  return (
+    <button onClick={handleClick}> // এখানে function reference পাঠানো হয়েছে। 
+      Click Me
+    </button>
+  );
+}
+
+Argument পাঠাতে চাইলে:
+
+<button onClick={() => handleClick("Rahim")}>
+  Click
+</button>

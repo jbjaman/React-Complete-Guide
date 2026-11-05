@@ -20,3 +20,67 @@
  * - State update যদি আগের state-এর ওপর নির্ভর করে, functional update বিবেচনা করবে।
  *
  */
+
+/**
+ * সবচেয়ে গুরুত্বপূর্ণ Hooks ->
+ * 
+ * useState
+Component-এর state manage করে।
+ * 
+ * useEffect
+Side effects যেমন API call, subscription এবং timer manage করে।
+ * 
+ * 
+ * useRef
+Re-render ছাড়াই value ধরে রাখে এবং DOM element access করতে পারে।
+ * 
+ * 
+ * useContext
+Component tree-তে Context-এর মাধ্যমে data share করে।
+ * 
+ * 
+ * useMemo
+Expensive calculation-এর result memoize করে।
+ *  
+ * 
+ * 
+ * useCallback
+Function reference memoize করে।
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */

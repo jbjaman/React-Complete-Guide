@@ -1,0 +1,9 @@
+Props ---------- State
+Parent থেকে আসে	------ Component নিজে manage করে
+Read-only	------- Setter দিয়ে update করা যায়
+Data pass করে	----- Dynamic data রাখে
+Parent control করে ---- Component manage করে
+
+What is the difference between Props and State?"
+
+তাহলে বলবে—Props হলো parent থেকে পাওয়া read-only data, আর State হলো component-এর নিজস্ব পরিবর্তনযোগ্য data।

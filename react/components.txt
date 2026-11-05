@@ -1,0 +1,24 @@
+React application বিভিন্ন ছোট ছোট reusable অংশ দিয়ে তৈরি হয়। এই অংশগুলোকে Components বলা হয়।
+
+Function Component:
+
+বর্তমানে React-এ Function Component সবচেয়ে বেশি ব্যবহার করা হয়।
+
+function Welcome() {
+  return <h1>Hello React!</h1>;
+}
+
+export default Welcome;
+
+function App() {
+  return (
+    <div>
+      <Welcome />
+      <Welcome />
+    </div>
+  );
+}
+
+একই component একাধিকবার ব্যবহার করা যাচ্ছে। এটিই Reusability।
+
+মনে রাখব: Component-এর নাম Capital Letter দিয়ে শুরু করতে হয়।

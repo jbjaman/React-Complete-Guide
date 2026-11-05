@@ -13,6 +13,10 @@ function App() {
           React হলো JavaScript-এর একটি library, যেটা দিয়ে interactive user
           interface (UI) তৈরি করা যায়।
           <br />
+          কেন React ব্যবহার করা হয়? 1. Component-based architecture 2. Reusable
+          UI components 3. Efficient UI updates 4. One-way data flow 5. Large
+          application maintain করা সহজ
+          <br />
           UI মানে user স্ক্রিনে যা দেখে এবং যার সঙ্গে interaction করে
           <br />
           2. React-এ সাধারণত UI-কে state বা props-এর ওপর নির্ভরশীল করে লেখা হয়।

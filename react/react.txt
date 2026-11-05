@@ -1,0 +1,14 @@
+React হলো একটি JavaScript Library, যা ব্যবহার করে আমরা User Interface (UI) তৈরি করতে পারি।
+
+কেন React ব্যবহার করা হয়?
+1. Component-based architecture
+2. Reusable UI components
+3. Efficient UI updates
+4. One-way data flow
+5. Large application maintain করা সহজ
+
+Library vs Framework
+- Library: নির্দিষ্ট কাজের জন্য functionality দেয়; application-এর structure developer নিজের মতো সাজাতে পারে।
+- Framework: Application তৈরির জন্য আরও নির্দিষ্ট structure ও conventions দেয়।
+
+React is a JavaScript library used to build interactive user interfaces. It follows a component-based architecture, allowing developers to create reusable UI components.
